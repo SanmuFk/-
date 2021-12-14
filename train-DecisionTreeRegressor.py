@@ -1,10 +1,11 @@
 import numpy as np
-import Preprocessing
+import preprocessing
 
 #随机生成训练集和测试集
 from sklearn.model_selection import train_test_split
-train = train_data
-y_train = y_train
+train = preprocessing.train   #训练、测试总数据
+y_train = preprocessing.y_train #目标变量
+#test_size为测试集所占比例，train训练，test测试
 X_train, X_test, y_train, y_test = train_test_split(
     train, y_train, random_state=42, test_size=.25)
 
